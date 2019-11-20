@@ -1,3 +1,6 @@
+/* -------------CSS reset----------- */
+
+
 /* /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -138,6 +141,8 @@ table {
   box-sizing: border-box;
 }
 
+/* -----------End of reset------------ */
+
 html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #333;
@@ -178,6 +183,8 @@ a {
   cursor: none;
 }
 
+/* Nav section */
+
 nav {
   position: relative;
   display: flex;
@@ -203,7 +210,7 @@ nav ul {
   height: 5rem;
   list-style: none;
   display: flex;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -238,6 +245,10 @@ nav ul li:hover {
   margin-right: 0;
 }
 
+/* End of Nav section */
+
+/* ----------------Main section--------------------- */
+
 .main {
   position: absolute;
   display: flex;
@@ -245,7 +256,6 @@ nav ul li:hover {
   left: 0;
   right: 0;
   bottom: 0;
-
 }
 
 .tone-1 {
@@ -306,17 +316,15 @@ nav ul li:hover {
   display: flex;
   padding: 1.3rem;
   color: #f7f7f6;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 900;
   transition: all .5s;
   border-radius: 50px;
-
 }
 
 .info-btns {
   display: flex;
   cursor: pointer;
-
 }
 
 .discover-btn {
@@ -332,4 +340,124 @@ nav ul li:hover {
 .cart-btn:hover {
   box-shadow: 3px 1rem 2rem rgba(0, 0, 0, .3);
   transform: translateY(-1rem);
+}
+
+/* End of Main section */
+
+/* ------------------Responsive Design --------------------*/
+
+@media screen and (max-width:1200px) {
+  .tone-2 img {
+    left: -8rem;
+  }
+
+  .product-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+
+    padding: 1.5rem;
+    font-size: 1rem;
+
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  .logo {
+    padding-left: 1.5rem;
+  }
+
+  nav ul {
+    height: 4.5rem;
+    font-size: 1rem;
+  }
+
+  nav ul li {
+    padding: 0 1.5rem;
+    line-height: 5em;
+  }
+
+
+  .tone-2 img {
+    left: -6rem;
+  }
+
+  .product-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+
+    padding: 1.5rem;
+    font-size: 1rem;
+
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  .logo {
+    padding-left: 1.5rem;
+  }
+
+  nav ul {
+    height: 4.5rem;
+    font-size: 1rem;
+  }
+
+  nav ul li {
+    padding: 0 1.5rem;
+    line-height: 5em;
+  }
+
+
+  .tone-2 img {
+    left: -6rem;
+  }
+
+  .product-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+
+    padding: 1.5rem;
+    font-size: 1rem;
+
+  }
 }
