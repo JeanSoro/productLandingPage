@@ -259,13 +259,13 @@ nav ul li:hover {
 }
 
 .tone-1 {
-  background-color: pink;
+  background-color: orange;
   height: 100vh;
   flex: 1;
 }
 
 .tone-2 {
-  background-color: powderblue;
+  background-color: rgba(41, 36, 36, 0);
   height: 100vh;
   flex: 1;
   position: relative;
@@ -299,6 +299,7 @@ nav ul li:hover {
   font-weight: 100;
   margin-bottom: 1rem;
   text-align: center;
+  text-transform: capitalize
 }
 
 .product-info p {
@@ -319,7 +320,7 @@ nav ul li:hover {
   font-size: 1.3rem;
   font-weight: 900;
   transition: all .5s;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 
 .info-btns {
@@ -349,6 +350,7 @@ nav ul li:hover {
 @media screen and (max-width:1200px) {
   .tone-2 img {
     left: -8rem;
+
   }
 
   .product-info h1 {
@@ -374,7 +376,7 @@ nav ul li:hover {
   }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:930px) {
 
   .logo {
     padding-left: 1.5rem;
@@ -388,6 +390,8 @@ nav ul li:hover {
   nav ul li {
     padding: 0 1.5rem;
     line-height: 5em;
+    margin-bottom: -.3rem;
+    margin-top: -.2rem;
   }
 
 
@@ -416,48 +420,204 @@ nav ul li:hover {
     font-size: 1rem;
 
   }
+}
+
+@media screen and (max-width:735px) {
+  .tone-2 img {
+    left: -1.5rem;
+  }
+
+  nav ul li {
+    padding: 0 .8rem;
+    line-height: 5rem;
+    margin-bottom: -.3rem;
+  }
+
+  .nav-right i {
+    margin-right: .5rem;
+  }
+
+  .nav-right i:first-child {
+    margin-right: .1.5rem;
+  }
+
+
 }
 
 @media screen and (max-width:600px) {
 
-  .logo {
-    padding-left: 1.5rem;
-  }
-
-  nav ul {
-    height: 4.5rem;
-    font-size: 1rem;
-  }
-
-  nav ul li {
-    padding: 0 1.5rem;
-    line-height: 5em;
-  }
-
 
   .tone-2 img {
-    left: -6rem;
-  }
+    left: -.2rem;
 
-  .product-info h1 {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
   }
 
   .product-info p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .product-info h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
 
   .btn {
+    padding: 1rem;
+  }
 
-    padding: 1.5rem;
+  .fa-times:before {
+    content: "\f00d";
+    position: relative;
+    left: -2rem;
+  }
+
+  nav {
+    display: flex;
+    border-bottom: none;
+    flex-direction: column;
+    width: 25rem;
+    height: 100vh;
+    background-color: #f7f7f6;
+    justify-content: space-evenly;
+    transform: translateX(-25rem);
+    transition: transform .5s;
+  }
+
+  nav ul {
+    height: initial;
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  nav ul li {
+    padding: 0;
+    line-height: initial;
+    margin-bottom: 2rem;
+    transition: transform .5s;
+  }
+
+  nav ul li:hover {
+    transform: translateX(10px);
+    background-color: #f7f7f6
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .nav-right ul li,
+  .nav-right ul li:nth-child(1) {
+    border: none;
+  }
+
+
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .fa-bars {
+    color: white;
+  }
+
+  .fa-times {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  .overlay {
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity .5s;
+
+
+  }
+
+  .overlay.menu-open {
+    width: 100%;
+    opacity: 1;
+  }
+
+
+}
+
+@media screen and (max-width:360px) {
+  nav {
+    display: flex;
+    border-bottom: none;
+    flex-direction: column;
+    width: 25rem;
+    height: 111vh;
+    background-color: #f7f7f6;
+    justify-content: space-evenly;
+    transform: translateX(-25rem);
+    transition: transform .5s;
+  }
+
+  nav ul {
+    height: initial;
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 2rem;
+  }
+
+  .logo img {
+    display: block;
+    width: 100%;
+    position: relative;
+    right: 15px;
+    margin-top: -23px;
+  }
+
+  .fa-times:before {
+    content: "\f00d";
+    position: absolute;
+    left: -3rem;
+  }
+
+  .tone-2 {
+    background-color: powderblue;
+    height: 105vh;
+    flex: 1;
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+@media screen and (max-width:415px) {
+  .tone-2 img {
+    left: 0rem;
+  }
+
+  .product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-info p {
     font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
+  .product-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    padding: .5rem;
+    font-size: .8rem;
   }
 }
